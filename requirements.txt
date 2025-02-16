@@ -18,7 +18,7 @@ h11==0.14.0
 idna==3.10
 jmespath==1.0.1
 multidict==6.1.0
-numpy==2.2.2
+numpy==2.0.2
 pandas==2.2.3
 propcache==0.2.1
 psycopg2-binary==2.9.10
