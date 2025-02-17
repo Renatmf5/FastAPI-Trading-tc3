@@ -19,7 +19,7 @@ After=network.target
 User=ec2-user
 Group=ec2-user
 WorkingDirectory=/home/ec2-user/fastapi-app
-ExecStart=/home/ec2-user/fastapi-app/venv/bin/uvicorn main:app --host 0.0.0.0 --port 80 > app.log 2>&1 &
+ExecStart=/home/ec2-user/fastapi-app/venv/bin/uvicorn main:app --host 0.0.0.0 --port 80
 Restart=always
 
 [Install]
