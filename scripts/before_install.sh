@@ -6,4 +6,6 @@ if [ -d "$DIR" ]; then
 else
   echo "Creating ${DIR} directory"
   sudo mkdir ${DIR}
+  # Definir permissões
+  sudo chown -R ec2-user:ec2-user ${DIR}
 fi

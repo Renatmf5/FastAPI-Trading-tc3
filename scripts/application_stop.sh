@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "ApplicationStop: Parando a aplicação existente"
-pkill python || true
+echo "ApplicationStop: Parando o serviço fastapi-app"
+sudo systemctl stop fastapi-app.service
