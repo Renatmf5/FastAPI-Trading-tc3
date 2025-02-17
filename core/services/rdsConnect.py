@@ -6,7 +6,7 @@ import json
 class Database:
     def __init__(self):
         self.secret_name = "RDSPostgresCredentials"
-        self.region_name = "us-east-1"
+        self.region_name = "ap-south-1"
         self.connection_pool = None
         self.initialize_pool()
 
