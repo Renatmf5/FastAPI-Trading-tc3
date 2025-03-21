@@ -5,8 +5,8 @@ annotated-types==0.7.0
 anyio==4.8.0
 async-timeout==5.0.1
 attrs==25.1.0
-boto3==1.36.17
-botocore==1.36.17
+boto3==1.37.17
+botocore==1.37.17
 certifi==2025.1.31
 charset-normalizer==3.4.1
 click==8.1.8
@@ -19,7 +19,9 @@ idna==3.10
 jmespath==1.0.1
 multidict==6.1.0
 numpy==2.0.2
+packaging==24.2
 pandas==2.2.3
+pipdeptree==2.25.1
 propcache==0.2.1
 psycopg2-binary==2.9.10
 pycryptodome==3.21.0
