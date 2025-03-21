@@ -29,9 +29,9 @@ def get_application() -> FastAPI:
 app = get_application()
 
 if __name__ == "__main__":
+    import uvicorn
     env = os.getenv("ENV", "development")
-    host = "0.0.0.0"
-    port = 80 if env == "production" else 8000
-    log_level = settings.LOG_LEVEL
-    
-    uvicorn.run("main:app", host=host, port=port, log_level=log_level, reload=(env != "production"))
+    if env == "production":
+        uvicorn.run("main:app", host="0.0.0.0", port=80, log_level=settings.LOG_LEVEL)
+    else:
+        uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level=settings.LOG_LEVEL, reload=True)
