@@ -14,6 +14,7 @@ class Settings(BaseSettings):
         env_file = ".env"
 
 if os.getenv('ENV') == 'production':
+    settings = Settings()
     """
     settings = Settings(
         JWT_SECRET=get_ssm_parameter("/my-fastApi-app/JWT_SECRET"),
