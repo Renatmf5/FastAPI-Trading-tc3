@@ -12,9 +12,11 @@ A arquitetura do projeto segue uma estrutura modular e bem organizada, dividida 
 
 ### 1. **Camada de API**
 - **`api/v1/api.py`**: Define os endpoints principais da API e organiza os routers.
-- **`api/endpoints/manage_metrics.py`**: Gerencia as métricas de trading.
-- **`api/endpoints/manage_trading.py`**: Gerencia as operações de trading, como abertura e fechamento de ordens.
-- **`api/endpoints/manage_orders.py`**: (não incluído nos arquivos fornecidos, mas referenciado na arquitetura).
+- **`api/endpoints/manageMetrics/getMetrics`**: Busca no RDS as informações de trades de metricas realizados no periodo de backtests dos modelos treinados, endpoint é util para interface grafica onde o usuario tem acesso a performance dos modelos durante o backtestes de periodos mensais
+- **`api/endpoints/manageTrading//SendTrade`**: Gerencia as operações de trading de simulação, como abertura e fechamento de ordens. e gravação do RDS dos status de ordens
+- **`api/endpoints/manageTrading/GetTrade`**: Busca no RDS a informações dos trades simulados em tempo real, endpoint utilizado pela plataforma web para apresentar os trades simulados em tempo real.
+- **`api/endpoints/manageOrders/getOpenPositions`**: Ainda não disponivel na V1 do sistema
+- **`api/endpoints/manageOrders/OpenPosition`**: Chama funções para trading, Ainda não disponivel na V1 do sistema
 
 ### 2. **Camada de Serviços**
 - **`core/services/binance_client.py`**: Integração com a API da Binance para operações de trading.
